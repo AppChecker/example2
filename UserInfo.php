@@ -3,7 +3,7 @@ include($_SERVER['DOCUMENT_ROOT'].'/btslab/mysqlconnection.php');
 
 if(isset($_GET['id']))
 {
-	$id=intval($_GET['id']);
+	$id=$_GET['id'];
 	$result=mysql_query("select * from users where id=".$id);
 	$data=@mysql_fetch_array($result);
 	if($data)
